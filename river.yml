@@ -1,0 +1,48 @@
+name: river
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+
+# STAPLES
+  - numpy
+  - matplotlib
+  - cmocean # nice colormaps
+  - pandas
+  - openpyxl # to open excel files
+  - scipy
+  - scikit-learn
+  - cvxpy # convex optimisation solvers
+  - jupyter
+  - jupyter_contrib_nbextensions # remember to uncheck 'disable incompatible'
+        # go-tos: codefolding, collapsible headings, runtools (alt/option-r to run marked cells)
+  - ipykernel
+  
+  
+ # GRAPH THEORY AND PRACTICE 
+  - networkx
+  - pygraphviz # for networkx plots
+  
+
+ # GEOSPATIAL ANALYSIS
+  - geopandas
+  - xarray # numpy arrays endowed with metadata, good e.g. for netCDF4 files
+  - bottleneck # speeds up NaN-skipping and rolling window aggregations by a large factor
+  - dask
+      # Xarray integrates with Dask to support parallel computations
+      # and streaming computation on datasets that don’t fit into memory. 
+      # Currently, Dask is an entirely optional feature for xarray. 
+      # However, the benefits of using Dask are sufficiently strong that Dask may 
+      # become a required dependency in a future version of xarray.
+  - landlab
+  - rasterio # to read topography (ESRI ASCII, GEOTIFF and other formats)
+  - netCDF4
+  - gdal # ('from osgeo import gdal' or from command line as installed with brew too)
+  # - pygmt # it seems better to still use GMT from terminal...
+  - gmt  
+  - contextily # retrieve tile maps from the internet add them as basemap to matplotlib figs
+  
+ # INTERACTIVE PLOTS
+  - plotly
+  - cufflinks-py
+

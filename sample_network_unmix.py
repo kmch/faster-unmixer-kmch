@@ -12,7 +12,14 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 import pandas as pd
+# The following lines are to find 
+# pyfastunmix.cpython-310-darwin.so CXX shared library
+# produced by pybind and cmake:
+import sys
+sys.path.append('build')
 import pyfastunmix
+##
+
 
 NO_DOWNSTREAM: Final[int] = 0
 SAMPLE_CODE_COL_NAME: Final[str] = "Sample.Code"
