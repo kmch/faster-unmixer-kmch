@@ -36,6 +36,13 @@ make
 cd ..
 ```
 
+Or on Mac, so that OpenMP and conda-installed gdal can be found:
+```
+mkdir build
+cd build
+../cmake-omp-gdal.sh
+```
+
 A conda environment file (`requirements.yaml`) is provided containing the python dependencies. A conda environment entitled `unmixing` can be generated from it using `conda env create -f requirements.yaml`.    
 
 ### Testing compilation
